@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daily.flexui.viewgroup.BottomSheetLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:bottomsheetlayout_sheetheight="42dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_bottom_sheet_card">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="34dp"
+            android:layout_height="6dp"
+            app:cardCornerRadius="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"/>
+
+        <com.daily.flexui.viewgroup.OverScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.daily.flexui.viewgroup.SquareTableLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:squaretablelayout_col="4"
+                    app:squaretablelayout_space="18dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon="@drawable/ic_wifi"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_back_start_color="@color/back3"
+                            app:baseview_endcolor="@color/back3"
+                            app:ficonview_icon="@drawable/ic_plane"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/colorDay"
+                            app:ficonview_back_end_color="@color/colorDay"
+                            app:ficonview_icon="@drawable/ic_moon"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back5"
+                            app:ficonview_back_end_color="@color/back5"
+                            app:ficonview_icon="@drawable/ic_light"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back6"
+                            app:ficonview_back_end_color="@color/back6"
+                            app:ficonview_icon="@drawable/ic_location"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon="@drawable/ic_bluetooth"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_back_start_color="@color/back3"
+                            app:baseview_endcolor="@color/back3"
+                            app:ficonview_icon="@drawable/ic_battery"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/colorDay"
+                            app:ficonview_back_end_color="@color/colorDay"
+                            app:ficonview_icon="@drawable/ic_camera"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back5"
+                            app:ficonview_back_end_color="@color/back5"
+                            app:ficonview_icon="@drawable/ic_scan"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back6"
+                            app:ficonview_back_end_color="@color/back6"
+                            app:ficonview_icon="@drawable/ic_font"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon="@drawable/ic_ios"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_back_start_color="@color/back3"
+                            app:baseview_endcolor="@color/back3"
+                            app:ficonview_icon="@drawable/ic_settings"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/colorDay"
+                            app:ficonview_back_end_color="@color/colorDay"
+                            app:ficonview_icon="@drawable/ic_sad"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back5"
+                            app:ficonview_back_end_color="@color/back5"
+                            app:ficonview_icon="@drawable/ic_phone"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back6"
+                            app:ficonview_back_end_color="@color/back6"
+                            app:ficonview_icon="@drawable/ic_apps"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon="@drawable/ic_star"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="true"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_back_start_color="@color/back3"
+                            app:baseview_endcolor="@color/back3"
+                            app:ficonview_icon="@drawable/ic_radio"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/colorDay"
+                            app:ficonview_back_end_color="@color/colorDay"
+                            app:ficonview_icon="@drawable/ic_alert"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back5"
+                            app:ficonview_back_end_color="@color/back5"
+                            app:ficonview_icon="@drawable/ic_heart"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="0dp">
+
+                        <com.daily.flexui.view.FIconView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:ficonview_isround="false"
+                            app:ficonview_radius="12dp"
+                            app:ficonview_isbacksolid="true"
+                            app:ficonview_isneon="true"
+                            app:ficonview_lightdistance="6dp"
+                            app:ficonview_icon_width="22dp"
+                            app:ficonview_icon_ischecked="false"
+                            app:ficonview_back_start_color="@color/back6"
+                            app:ficonview_back_end_color="@color/back6"
+                            app:ficonview_icon="@drawable/ic_flash"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </com.daily.flexui.viewgroup.SquareTableLayout>
+
+            </LinearLayout>
+
+        </com.daily.flexui.viewgroup.OverScrollView>
+
+
+    </LinearLayout>
+
+</com.daily.flexui.viewgroup.BottomSheetLayout>

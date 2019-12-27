@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.daily.flexui.flexviewpager.FViewPager
+        android:id="@+id/viewPager_khdfbwuefefbzbzsleudfewFbilwebraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.daily.flexui.flexviewpager.FViewPager>
+
+    <com.daily.flexui.flexviewpager.PagerIndicator
+        android:id="@+id/indicator_fdimhfedoffndufjikfmdnfuhfednjfnf"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="8dp" />
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daily.flexui.viewgroup.SquareTableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:squaretablelayout_col="2"
+    app:squaretablelayout_space="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#66FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp">
+
+        <com.daily.flexui.view.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:circleimageview_borderWidth="2dp"
+            app:circleimageview_radius="8dp"
+            app:circleimageview_isround="false"
+            android:src="@drawable/img_2"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#66FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp">
+
+        <com.daily.flexui.view.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:circleimageview_borderWidth="2dp"
+            app:circleimageview_startcolor="#ffffff"
+            app:circleimageview_endcolor="#ffffff"
+            app:circleimageview_radius="8dp"
+            app:circleimageview_isround="false"
+            android:src="@drawable/img_1"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+</com.daily.flexui.viewgroup.SquareTableLayout>

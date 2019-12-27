@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleLayout">
+        <attr name="titlelayout_text" format="string"/>
+        <attr name="titlelayout_text_color" format="string"/>
+        <attr name="titlelayout_text_minscale" format="dimension"/>
+        <attr name="titlelayout_text_maxscale" format="dimension"/>
+        <attr name="titlelayout_text_size" format="dimension"/>
+        <attr name="titlelayout_title_marginleft" format="dimension"/>
+        <attr name="titlelayout_title_margintop" format="dimension"/>
+        <attr name="titlelayout_content_margintop" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="OverScrollView">
+        <attr name="overscrollview_damping" format="float"/>
+        <attr name="overscrollview_range" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="SquareTableLayout">
+        <attr name="squaretablelayout_col" format="integer"/>
+        <attr name="squaretablelayout_row" format="integer"/>
+        <attr name="squaretablelayout_space" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="BaseGradientView">
+        <attr name="baseview_startcolor" format="color"/>
+        <attr name="baseview_endcolor" format="color"/>
+        <attr name="baseview_basecolor" format="color"/>
+        <attr name="baseview_radius" format="dimension"/>
+        <attr name="baseview_animin">
+            <flag name="up" value="1"/>
+            <flag name="down" value="2"/>
+            <flag name="left" value="3"/>
+            <flag name="right" value="4"/>
+            <flag name="fade" value="5"/>
+            <flag name="roll" value="6"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FloatingLayout">
+        <attr name="floatinglayout_floating_type">
+            <flag name="horizontal" value="1"/>
+            <flag name="vertical" value="2"/>
+        </attr>
+
+        <attr name="floatinglayout_floating_value" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="switchbutton_ischecked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="loadingview_space" format="dimension"/>
+        <attr name="loadingview_dotsize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="HollowButton">
+        <attr name="hollowbutton_text" format="string"/>
+        <attr name="hollowbutton_textsize" format="dimension"/>
+        <attr name="hollowbutton_backcolor" format="color"/>
+        <attr name="hollowbutton_radius" format="dimension"/>
+        <attr name="hollowbutton_isgradient" format="boolean"/>
+        <attr name="hollowbutton_isround" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientTextView">
+        <attr name="gradienttextview_text" format="string"/>
+        <attr name="gradienttextview_textsize" format="dimension"/>
+        <attr name="gradienttextview_fontassets" format="string"/>
+        <attr name="gradienttextview_boldsize" format="float"/>
+        <attr name="gradienttextview_fakebold" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="IconView">
+        <attr name="iconview_isgradient" format="boolean"/>
+        <attr name="iconview_src" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="NeonLayout">
+        <attr name="neonlayout_light_radius" format="dimension"/>
+        <attr name="neonlayout_radius" format="dimension"/>
+        <attr name="neonlayout_lightcolor" format="color"/>
+        <attr name="neonlayout_issolid" format="boolean" />
+        <attr name="neonlayout_isround" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressView">
+        <attr name="progressview_progress" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientButton">
+        <attr name="gradientbutton_issolid" format="boolean"/>
+        <attr name="gradientbutton_radius" format="dimension"/>
+        <attr name="gradientbutton_isround" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="circleimageview_borderWidth" format="dimension"/>
+        <attr name="circleimageview_radius" format="dimension"/>
+        <attr name="circleimageview_isround" format="boolean"/>
+        <attr name="circleimageview_startcolor" format="color"/>
+        <attr name="circleimageview_endcolor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckButton">
+        <attr name="checkbutton_borderwidth" format="dimension"/>
+        <attr name="checkbutton_iconwidth" format="dimension"/>
+        <attr name="checkbutton_icon" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="FIconView">
+        <attr name="ficonview_isneon" format="boolean"/>
+        <attr name="ficonview_isbacksolid" format="boolean"/>
+        <attr name="ficonview_isround" format="boolean"/>
+        <attr name="ficonview_back_normal_color" format="color"/>
+        <attr name="ficonview_icon_normal_color" format="color"/>
+        <attr name="ficonview_back_start_color" format="color"/>
+        <attr name="ficonview_back_end_color" format="color"/>
+        <attr name="ficonview_icon_start_color" format="color"/>
+        <attr name="ficonview_icon_end_color" format="color"/>
+        <attr name="ficonview_neoncolor" format="color"/>
+        <attr name="ficonview_radius" format="dimension"/>
+        <attr name="ficonview_lightdistance" format="dimension"/>
+        <attr name="ficonview_icon" format="reference"/>
+        <attr name="ficonview_icon_width" format="dimension"/>
+        <attr name="ficonview_icon_ischecked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="umanoPanelHeight" format="dimension" />
+        <attr name="umanoShadowHeight" format="dimension" />
+        <attr name="umanoParallaxOffset" format="dimension" />
+        <attr name="umanoFadeColor" format="color" />
+        <attr name="umanoFlingVelocity" format="integer" />
+        <attr name="umanoDragView" format="reference" />
+        <attr name="umanoScrollableView" format="reference" />
+        <attr name="umanoOverlay" format="boolean"/>
+        <attr name="umanoClipPanel" format="boolean"/>
+        <attr name="umanoAnchorPoint" format="float" />
+        <attr name="umanoInitialState" format="enum">
+            <enum name="expanded" value="0" />
+            <enum name="collapsed" value="1" />
+            <enum name="anchored" value="2" />
+            <enum name="hidden" value="3" />
+        </attr>
+        <attr name="umanoScrollInterpolator" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomSheetLayout">
+        <attr name="bottomsheetlayout_sheetheight" format="dimension"/>
+    </declare-styleable>
+
+</resources>

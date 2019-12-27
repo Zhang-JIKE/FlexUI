@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daily.flexui.viewgroup.BottomSheetLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <FrameLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/back0">
+
+        </FrameLayout>
+
+        <com.daily.flexui.viewgroup.SquareLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+
+        </com.daily.flexui.viewgroup.SquareLayout>
+
+    </com.daily.flexui.viewgroup.BottomSheetLayout>

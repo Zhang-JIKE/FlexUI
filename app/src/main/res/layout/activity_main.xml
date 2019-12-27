@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daily.flexui.viewgroup.CurtainLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="-150dp">
+
+            <com.daily.flexui.view.IconView
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                app:iconview_isgradient="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="60dp"
+                app:baseview_animin="roll"
+                app:iconview_src="@mipmap/ic_launcher3"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal|bottom"
+                android:clipChildren="false">
+
+                <com.daily.flexui.view.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:gradienttextview_textsize="24sp"
+                    app:baseview_startcolor="#6f717d"
+                    app:baseview_endcolor="#6f717d"
+                    app:gradienttextview_boldsize="0"
+                    app:gradienttextview_fakebold="false"
+                    app:gradienttextview_fontassets="ProximaSansMedium.ttf"
+                    app:gradienttextview_text="Flex "
+                    app:baseview_animin="fade"/>
+
+                <com.daily.flexui.view.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:gradienttextview_textsize="24sp"
+                    app:baseview_startcolor="#25FFFF"
+                    app:baseview_endcolor="#842DFF"
+                    app:gradienttextview_boldsize="0"
+                    app:gradienttextview_fakebold="false"
+                    app:gradienttextview_fontassets="ProximaSansMedium.ttf"
+                    app:gradienttextview_text="OS"
+                    app:baseview_animin="right"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="bottom|center_horizontal">
+
+
+            <com.daily.flexui.viewgroup.FloatingLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:floatinglayout_floating_type="vertical"
+                app:floatinglayout_floating_value="5dp"
+                android:layout_marginBottom="4dp">
+
+                <com.daily.flexui.view.IconView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    app:iconview_isgradient="true"
+                    app:baseview_startcolor="@color/baseDarkColor"
+                    app:baseview_endcolor="@color/baseDarkColor"
+                    app:iconview_src="@drawable/ic_up" />
+
+            </com.daily.flexui.viewgroup.FloatingLayout>
+
+            <com.daily.flexui.viewgroup.NeonLayout
+                android:layout_width="140dp"
+                android:layout_height="46dp"
+                app:neonlayout_issolid="true"
+                app:neonlayout_lightcolor="#29B6F6"
+                app:neonlayout_light_radius="6dp"
+                app:neonlayout_isround="true">
+
+                <com.daily.flexui.view.GradientTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:baseview_startcolor="@color/white"
+                    app:baseview_endcolor="@color/white"
+                    app:gradienttextview_text="1.0"
+                    app:gradienttextview_textsize="17sp"
+                    app:baseview_animin="up"/>
+
+            </com.daily.flexui.viewgroup.NeonLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <com.daily.flexui.viewgroup.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:titlelayout_text="Flex"
+        app:titlelayout_title_marginleft="22dp"
+        app:titlelayout_content_margintop="0dp"
+        app:titlelayout_text_size="32sp">
+
+        <com.daily.flexui.viewgroup.OverScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overscrollview_damping="1.8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/back1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="18dp">
+
+                    <com.daily.flexui.viewgroup.SquareLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.daily.flexui.viewgroup.SquareTableLayout android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:squaretablelayout_col="4"
+                            app:squaretablelayout_space="12dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.SwitchButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.LoadingView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#32FFFFFF"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.HollowButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:hollowbutton_text="Hollo"
+                                    app:hollowbutton_textsize="12sp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="#E6FFFFFF"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.HollowButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:hollowbutton_text="Hollo"
+                                    app:hollowbutton_textsize="12sp"
+                                    android:layout_gravity="center"
+                                    app:hollowbutton_isgradient="true"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.GradientTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:gradienttextview_text="Gradient"
+                                    app:gradienttextview_textsize="13sp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.IconView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    app:iconview_isgradient="true"
+                                    app:iconview_src="@drawable/ic_phone"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.IconView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    app:iconview_isgradient="true"
+                                    app:baseview_startcolor="@color/baseColor"
+                                    app:baseview_endcolor="@color/baseColor"
+                                    app:iconview_src="@drawable/ic_msg"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.viewgroup.NeonLayout
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="center"
+                                    app:neonlayout_light_radius="8dp"
+                                    app:neonlayout_radius="12dp"
+                                    app:neonlayout_issolid="true">
+
+
+                                </com.daily.flexui.viewgroup.NeonLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.viewgroup.NeonLayout
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="center"
+                                    app:neonlayout_light_radius="8dp"
+                                    app:neonlayout_lightcolor="@color/back4"
+                                    app:neonlayout_issolid="true"
+                                    app:neonlayout_isround="true">
+
+                                </com.daily.flexui.viewgroup.NeonLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.ProgressView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:progressview_progress="70"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.GradientButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:gradienttextview_text="Button"
+                                    app:gradienttextview_textsize="12sp"
+                                    app:gradientbutton_radius="8dp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.GradientButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:gradienttextview_text="Button"
+                                    app:gradienttextview_textsize="12sp"
+                                    app:gradientbutton_radius="8dp"
+                                    app:gradientbutton_issolid="false"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.CheckButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:checkbutton_borderwidth="2.5dp"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.FIconView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:ficonview_isround="true"
+                                    app:ficonview_isbacksolid="true"
+                                    app:ficonview_isneon="true"
+                                    app:ficonview_lightdistance="6dp"
+                                    app:ficonview_icon_width="22dp"
+                                    app:ficonview_icon="@drawable/ic_wifi"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.FIconView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:ficonview_isround="true"
+                                    app:ficonview_isbacksolid="true"
+                                    app:ficonview_isneon="true"
+                                    app:ficonview_lightdistance="6dp"
+                                    app:ficonview_icon_width="22dp"
+                                    app:ficonview_back_start_color="@color/back3"
+                                    app:baseview_endcolor="@color/back3"
+                                    app:ficonview_icon="@drawable/ic_plane"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="18dp"
+                                app:cardElevation="0dp">
+
+                                <com.daily.flexui.view.FIconView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:ficonview_isround="false"
+                                    app:ficonview_radius="12dp"
+                                    app:ficonview_isbacksolid="true"
+                                    app:ficonview_isneon="true"
+                                    app:ficonview_lightdistance="6dp"
+                                    app:ficonview_icon_width="22dp"
+                                    app:ficonview_icon_ischecked="false"
+                                    app:ficonview_back_start_color="@color/colorDay"
+                                    app:ficonview_back_end_color="@color/colorDay"
+                                    app:ficonview_icon="@drawable/ic_moon"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </com.daily.flexui.viewgroup.SquareTableLayout>
+
+
+                    </com.daily.flexui.viewgroup.SquareLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/back2"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="18dp">
+
+
+                    <com.daily.flexui.flexviewpager.EndlessViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/back3"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="18dp">
+
+                    <com.daily.flexui.viewgroup.FlowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp">
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="River"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Flex"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="OS"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="UIKIT"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Fluid"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Useful"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Fly"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Yourself"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Icon"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Flow"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="Go!"
+                            app:hollowbutton_textsize="13sp"/>
+
+                        <com.daily.flexui.view.HollowButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            app:hollowbutton_text="GitHub"
+                            app:hollowbutton_textsize="13sp"/>
+
+                    </com.daily.flexui.viewgroup.FlowLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/back4"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="18dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/back5"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="18dp"/>
+
+
+            </LinearLayout>
+
+        </com.daily.flexui.viewgroup.OverScrollView>
+
+    </com.daily.flexui.viewgroup.TitleLayout>
+
+</com.daily.flexui.viewgroup.CurtainLayout>
