@@ -22,4 +22,8 @@ public class BitmapUtils {
         drawable.draw(canvas);
         return bitmap;
     }
+
+    public static Bitmap blur(){
+        return null;
+    }
 }
