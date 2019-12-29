@@ -55,6 +55,16 @@ public class FIconView extends BaseGradientView {
 
     private boolean isChecked;
 
+    public interface OnCheckListener{
+        void onCheck(boolean isChecked);
+    }
+
+    private OnCheckListener onCheckListener;
+
+    public void setOnCheckListener(OnCheckListener onCheckListener) {
+        this.onCheckListener = onCheckListener;
+    }
+
     public FIconView(Context context) {
         super(context);
     }
@@ -277,12 +287,22 @@ public class FIconView extends BaseGradientView {
         }else {
             if (isChecked) {
                 animUnCheck();
+                if(onCheckListener!=null){
+                    onCheckListener.onCheck(isChecked);
+                }
             } else {
                 animCheck();
+                if(onCheckListener!=null){
+                    onCheckListener.onCheck(isChecked);
+                }
             }
             animate().scaleX(1f).scaleY(1).setDuration(270)
                     .setInterpolator(FlexUiEngine.OverInterpolator()).start();
         }
-            return true;
+        return true;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
     }
 }

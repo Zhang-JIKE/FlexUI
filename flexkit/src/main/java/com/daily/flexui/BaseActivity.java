@@ -10,7 +10,7 @@ import com.daily.flexui.util.AppContextUtils;
 import com.daily.flexui.util.StatusBarUtils;
 
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
