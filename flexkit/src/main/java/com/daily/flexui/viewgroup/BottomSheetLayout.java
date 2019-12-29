@@ -73,7 +73,7 @@ public class BottomSheetLayout extends ViewGroup {
         childHeight = slideView.getMeasuredHeight();
 
         mainView.layout(0,0,getMeasuredWidth(),getMeasuredHeight());
-        slideView.layout(0, (int) (parentHeight-childHeight),getMeasuredWidth(), (int) (parentHeight));
+        slideView.layout(0, (int) (parentHeight-sheetHeight),getMeasuredWidth(), (int) ((int) (parentHeight-sheetHeight)+childHeight));
 
         recentY = slideView.getY();
     }
