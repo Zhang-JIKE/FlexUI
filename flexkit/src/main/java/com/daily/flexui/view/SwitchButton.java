@@ -133,6 +133,10 @@ public class SwitchButton extends BaseGradientView {
         }
     }
 
+    public boolean isChecked() {
+        return isChecked;
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -157,55 +161,58 @@ public class SwitchButton extends BaseGradientView {
             animatorR.removeAllListeners();
         }
 
-        animatorL=ValueAnimator.ofInt(deltaL,le);
-        animatorL.setDuration(300);
-        animatorL.setStartDelay(150);
-        animatorL.setInterpolator(FlexUiEngine.EaseInterpolator());
-        animatorL.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int v = (int) animation.getAnimatedValue();
-                deltaL = v;
-                invalidate();
-            }
-        });
-
         final int startValue = deltaR;
-        animatorR=ValueAnimator.ofInt(deltaR,re);
-        animatorR.setDuration(300);
-        animatorR.setInterpolator(FlexUiEngine.EaseInterpolator());
-        animatorR.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int v = (int) animation.getAnimatedValue();
-                deltaR = v;
-                fillPaint.setAlpha((int) (255*(v-startValue)/(re-startValue)));
-                invalidate();
-            }
-        });
-        animatorR.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-                animatorL.start();
-            }
+        if(re-startValue>0) {
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
+            animatorL = ValueAnimator.ofInt(deltaL, le);
+            animatorL.setDuration(300);
+            animatorL.setStartDelay(150);
+            animatorL.setInterpolator(FlexUiEngine.EaseInterpolator());
+            animatorL.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int v = (int) animation.getAnimatedValue();
+                    deltaL = v;
+                    invalidate();
+                }
+            });
 
-            }
 
-            @Override
-            public void onAnimationCancel(Animator animation) {
+            animatorR = ValueAnimator.ofInt(deltaR, re);
+            animatorR.setDuration(300);
+            animatorR.setInterpolator(FlexUiEngine.EaseInterpolator());
+            animatorR.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int v = (int) animation.getAnimatedValue();
+                    deltaR = v;
+                    fillPaint.setAlpha((int) (255 * (v - startValue) / (re - startValue)));
+                    invalidate();
+                }
+            });
+            animatorR.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    animatorL.start();
+                }
 
-            }
+                @Override
+                public void onAnimationEnd(Animator animation) {
 
-            @Override
-            public void onAnimationRepeat(Animator animation) {
+                }
 
-            }
-        });
-        animatorR.start();
+                @Override
+                public void onAnimationCancel(Animator animation) {
 
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+
+                }
+            });
+            animatorR.start();
+        }
     }
 
     private void animUnCheck(){
@@ -222,56 +229,59 @@ public class SwitchButton extends BaseGradientView {
             animatorR.removeAllListeners();
         }
 
-        animatorR=ValueAnimator.ofInt(deltaR,rs);
-        animatorR.setDuration(300);
-        animatorR.setStartDelay(150);
-        animatorR.setInterpolator(FlexUiEngine.EaseInterpolator());
-        animatorR.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int v = (int) animation.getAnimatedValue();
-                deltaR = v;
-                invalidate();
-            }
-        });
-
         final int startValue = deltaL;
-        animatorL=ValueAnimator.ofInt(deltaL,ls);
-        animatorL.setDuration(300);
-        animatorL.setInterpolator(FlexUiEngine.EaseInterpolator());
-        animatorL.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int v = (int) animation.getAnimatedValue();
-                deltaL = v;
-                fillPaint.setAlpha((int) (255-255*(v-startValue)/(ls-startValue)));
-                invalidate();
-            }
-        });
+        if(ls-startValue>0) {
 
-        animatorL.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-                animatorR.start();
-            }
+            animatorR = ValueAnimator.ofInt(deltaR, rs);
+            animatorR.setDuration(300);
+            animatorR.setStartDelay(150);
+            animatorR.setInterpolator(FlexUiEngine.EaseInterpolator());
+            animatorR.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int v = (int) animation.getAnimatedValue();
+                    deltaR = v;
+                    invalidate();
+                }
+            });
 
-            @Override
-            public void onAnimationEnd(Animator animation) {
 
-            }
+            animatorL = ValueAnimator.ofInt(deltaL, ls);
+            animatorL.setDuration(300);
+            animatorL.setInterpolator(FlexUiEngine.EaseInterpolator());
+            animatorL.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    int v = (int) animation.getAnimatedValue();
+                    deltaL = v;
+                    fillPaint.setAlpha((int) (255 - 255 * (v - startValue) / (ls - startValue)));
+                    invalidate();
+                }
+            });
 
-            @Override
-            public void onAnimationCancel(Animator animation) {
+            animatorL.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    animatorR.start();
+                }
 
-            }
+                @Override
+                public void onAnimationEnd(Animator animation) {
 
-            @Override
-            public void onAnimationRepeat(Animator animation) {
+                }
 
-            }
-        });
-        animatorL.start();
+                @Override
+                public void onAnimationCancel(Animator animation) {
 
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+
+                }
+            });
+            animatorL.start();
+        }
     }
 
 }
