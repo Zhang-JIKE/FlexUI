@@ -35,6 +35,16 @@ public class SwitchButton extends BaseGradientView {
 
     private ValueAnimator animatorL,animatorR;
 
+    private interface OnSwitchChangedListner {
+        void onSwitchChanged(boolean isChecked);
+    }
+
+    private OnSwitchChangedListner onSwitchChangedListner;
+
+    public void setOnSwitchChangedListner(OnSwitchChangedListner onSwitchChangedListner) {
+        this.onSwitchChangedListner = onSwitchChangedListner;
+    }
+
     public SwitchButton(Context context) {
         super(context);
     }
@@ -103,6 +113,9 @@ public class SwitchButton extends BaseGradientView {
                     animUnCheck();
                 }else {
                     animCheck();
+                }
+                if(onSwitchChangedListner!=null){
+                    onSwitchChangedListner.onSwitchChanged(isChecked);
                 }
             }
         });
