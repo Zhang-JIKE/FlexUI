@@ -35,7 +35,7 @@ public class SwitchButton extends BaseGradientView {
 
     private ValueAnimator animatorL,animatorR;
 
-    private interface OnSwitchChangedListner {
+    public interface OnSwitchChangedListner {
         void onSwitchChanged(boolean isChecked);
     }
 
