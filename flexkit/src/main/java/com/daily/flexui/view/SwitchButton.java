@@ -121,6 +121,18 @@ public class SwitchButton extends BaseGradientView {
         });
     }
 
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+        if(isChecked){
+            animUnCheck();
+        }else {
+            animCheck();
+        }
+        if(onSwitchChangedListner!=null){
+            onSwitchChangedListner.onSwitchChanged(isChecked);
+        }
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
