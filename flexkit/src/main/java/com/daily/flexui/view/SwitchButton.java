@@ -58,6 +58,7 @@ public class SwitchButton extends BaseGradientView {
         super.init(attrs);
         TypedArray array = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.SwitchButton, 0, 0);
         isChecked = array.getBoolean(R.styleable.SwitchButton_switchbutton_ischecked, false);
+        fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         array.recycle();
     }
 
@@ -75,7 +76,7 @@ public class SwitchButton extends BaseGradientView {
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
         toggleRadius = (height - 2*borderWidth)/2;
-        fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
         fillPaint.setColor(startColor);
         Shader mShader = new LinearGradient(0,0,width,height,
                 new int[]{startColor,endColor},
