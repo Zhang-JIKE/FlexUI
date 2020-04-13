@@ -73,57 +73,21 @@ public class FViewPager extends ViewPager {
         }
         return super.dispatchTouchEvent(ev);
     }
-/*
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        final int minimumWidth = getSuggestedMinimumWidth();
-        final int minimumHeight = getSuggestedMinimumHeight();
+       int height = 0;
+	    for(int i = 0; i < getChildCount(); i++) {
+	      View child = getChildAt(i);
+	      child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
+	      int h = child.getMeasuredHeight();
+	      if(h > height) height = h;
+	    }
 
-        int width = measureWidth(minimumWidth, widthMeasureSpec);
-        int height = measureHeight(minimumHeight, heightMeasureSpec);
-        setMeasuredDimension(width, height);
+	    heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
 
+	    super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
-
-    private int measureWidth(int defaultWidth, int measureSpec) {
-
-        int specMode = MeasureSpec.getMode(measureSpec);
-        int specSize = MeasureSpec.getSize(measureSpec);
-
-        switch (specMode) {
-            case MeasureSpec.AT_MOST:
-                defaultWidth = specSize;
-                break;
-            case MeasureSpec.EXACTLY:
-                defaultWidth = specSize;
-                break;
-            case MeasureSpec.UNSPECIFIED:
-                defaultWidth = specSize;
-        }
-        return defaultWidth;
-    }
-
-    private int measureHeight(int defaultHeight, int measureSpec) {
-
-        int specMode = MeasureSpec.getMode(measureSpec);
-        int specSize = MeasureSpec.getSize(measureSpec);
-
-        switch (specMode) {
-            case MeasureSpec.AT_MOST:
-                defaultHeight = getFirstViewHeight();
-                break;
-            case MeasureSpec.EXACTLY:
-                defaultHeight = specSize;
-                break;
-            case MeasureSpec.UNSPECIFIED:
-                defaultHeight = specSize;
-                break;
-        }
-        return defaultHeight;
-    }
-    private int getFirstViewHeight(){
-        return 1300;
-    }*/
 
 }
