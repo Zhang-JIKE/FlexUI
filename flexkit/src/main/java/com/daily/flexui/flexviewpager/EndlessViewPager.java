@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class EndlessViewPager extends FrameLayout {
 
-    private FViewPager viewPager;
+    public FViewPager viewPager;
 
-    private PagerIndicator indicator;
+    public PagerIndicator indicator;
 
     public EndlessViewPager(Context context) {
         super(context);
@@ -31,32 +31,16 @@ public class EndlessViewPager extends FrameLayout {
         indicator = view.findViewById(R.id.indicator_fdimhfedoffndufjikfmdnfuhfednjfnf);
         viewPager = view.findViewById(R.id.viewPager_khdfbwuefefbzbzsleudfewFbilwebraw);
 
-        initViewPager();
     }
 
-    private void initViewPager(){
-        final ArrayList<Integer> res = new ArrayList<>();
-        res.add(R.layout.item_banner);
-        res.add(R.layout.item_banner2);
-        res.add(R.layout.item_banner);
-        res.add(R.layout.item_banner2);
-
-        EndlessAdapter<ArrayList<Integer>> endlessAdapter = new EndlessAdapter<>(res,
-                res, new EndlessAdapter.OnCreateItemListener() {
-            @Override
-            public void onCreateItem(View view, int pos) {
-
-            }
-        });
-
-        indicator.setPageCount(res.size());
-
-        viewPager.setAdapter(endlessAdapter);
+    public void initViewPager(final ArrayList<Integer> layoutIds ,EndlessAdapter adapter){
+        indicator.setPageCount(layoutIds.size());
+        viewPager.setAdapter(adapter);
         viewPager.setOnScrollListener(new FViewPager.OnScrollListener() {
             @Override
             public void onScroll(float offSet,int pos, boolean isRightSlide) {
-                if(isRightSlide && offSet> res.size() - 1){
-                    offSet = offSet - res.size();
+                if(isRightSlide && offSet> layoutIds.size() - 1){
+                    offSet = offSet - layoutIds.size();
                 }
                 indicator.setOffSetX(offSet);
             }

@@ -117,6 +117,7 @@ public class NeonLayout extends FrameLayout {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             canvas.drawRoundRect(lightRadius,lightRadius,width-lightRadius,height-lightRadius,radius,radius,paint);
 
