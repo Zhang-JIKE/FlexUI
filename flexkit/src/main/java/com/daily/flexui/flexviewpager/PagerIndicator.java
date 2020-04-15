@@ -1,6 +1,7 @@
 package com.daily.flexui.flexviewpager;
 
 import android.content.Context;
+import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -16,7 +17,7 @@ public class PagerIndicator extends BaseGradientView {
 
     private int pageCount;
 
-    private float indicatorWidth;
+    private int lightRadius = 12;
 
     private float offSetX;
 
@@ -32,18 +33,18 @@ public class PagerIndicator extends BaseGradientView {
 
     @Override
     public int getWrapContentHeight() {
-        return super.getWrapContentHeight() + DisplayUtils.dp2px(4f);
+        return super.getWrapContentHeight() + DisplayUtils.dp2px(4f) + lightRadius*2;
     }
 
     @Override
     public int getWrapContentWidth() {
-        return super.getWrapContentWidth()+DisplayUtils.dp2px(80);
+        return super.getWrapContentWidth()+DisplayUtils.dp2px(80)+lightRadius*2;
     }
 
     @Override
     public void init(AttributeSet attrs) {
         super.init(attrs);
-
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
         backPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         backPaint.setColor(Color.WHITE);
         backPaint.setAlpha(40);
@@ -51,6 +52,23 @@ public class PagerIndicator extends BaseGradientView {
         forePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         forePaint.setColor(Color.WHITE);
         forePaint.setAlpha(200);
+        forePaint.setShadowLayer(12,0,0,Color.WHITE);
+    }
+
+    private void setProgressColor(int color){
+        forePaint.setColor(color);
+        invalidate();
+    }
+
+    private void setProgressAlpha(int alpha){
+        forePaint.setAlpha(alpha);
+        invalidate();
+    }
+
+    private void setProgressLight(int lightRadius, int color){
+        forePaint.setShadowLayer(lightRadius,0,0,color);
+        this.lightRadius = lightRadius;
+        invalidate();
     }
 
     public void setPageCount(int pageCount) {
@@ -73,8 +91,8 @@ public class PagerIndicator extends BaseGradientView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.drawRoundRect(0, 0, width, height, height / 2, height / 2, backPaint);
-            canvas.drawRoundRect(offSetX * (width / pageCount), 0, offSetX * (width / pageCount) + (width / pageCount), height, height / 2, height / 2, forePaint);
+            canvas.drawRoundRect(0, lightRadius, width, height-lightRadius, height / 2, height / 2, backPaint);
+            canvas.drawRoundRect(offSetX * (width / pageCount), lightRadius, offSetX * (width / pageCount) + (width / pageCount), height-lightRadius, height / 2, height / 2, forePaint);
         }
     }
 }
