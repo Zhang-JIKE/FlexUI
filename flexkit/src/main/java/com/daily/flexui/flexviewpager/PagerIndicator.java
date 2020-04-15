@@ -55,17 +55,17 @@ public class PagerIndicator extends BaseGradientView {
         forePaint.setShadowLayer(12,0,0,Color.WHITE);
     }
 
-    private void setProgressColor(int color){
+    public void setProgressColor(int color){
         forePaint.setColor(color);
         invalidate();
     }
 
-    private void setProgressAlpha(int alpha){
+    public void setProgressAlpha(int alpha){
         forePaint.setAlpha(alpha);
         invalidate();
     }
 
-    private void setProgressLight(int lightRadius, int color){
+    public void setProgressLight(int lightRadius, int color){
         forePaint.setShadowLayer(lightRadius,0,0,color);
         this.lightRadius = lightRadius;
         invalidate();
