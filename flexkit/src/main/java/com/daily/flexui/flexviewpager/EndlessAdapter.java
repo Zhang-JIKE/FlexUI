@@ -61,6 +61,9 @@ public class EndlessAdapter<T extends List> extends PagerAdapter {
 
         View view = LayoutInflater.from(AppContextUtils.getAppContext()).inflate(layoutIds.get(pos), null);
         container.addView(view);
+        if(onCreateItemListener!=null){
+            onCreateItemListener.onCreateItem(view,pos);
+        }
         return view;
     }
 
