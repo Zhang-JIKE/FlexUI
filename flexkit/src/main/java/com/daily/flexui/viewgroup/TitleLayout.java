@@ -13,6 +13,8 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.core.content.res.ResourcesCompat;
+
 import com.daily.flexui.R;
 import com.daily.flexui.util.DisplayUtils;
 import com.daily.flexui.util.FunctionUtils;
@@ -35,6 +37,7 @@ public class TitleLayout extends LinearLayout {
     private int contentMarginTop;
 
     private Paint textPaint;
+    private int fontId;
 
     private TextView textView;
     private OverScrollView scrollView;
@@ -52,6 +55,8 @@ public class TitleLayout extends LinearLayout {
         minTitleScale = array.getDimension(R.styleable.TitleLayout_titlelayout_text_minscale,0.97f);
         maxTitleScale = array.getDimension(R.styleable.TitleLayout_titlelayout_text_maxscale,1.03f);
         textSize = array.getDimension(R.styleable.TitleLayout_titlelayout_text_size,32);
+        fontId = array.getResourceId(R.styleable.TitleLayout_titlelayout_font,0);
+
 
         textMarginLeft = (int) array.getDimension(R.styleable.TitleLayout_titlelayout_title_marginleft, DisplayUtils.dp2px(24));
         textMarginTop = (int) array.getDimension(R.styleable.TitleLayout_titlelayout_title_margintop, DisplayUtils.dp2px(50));
@@ -82,11 +87,14 @@ public class TitleLayout extends LinearLayout {
         textView.setLayoutParams(params);
         textView.setPivotX(0);
         textView.setPivotY(0);
+        //textView .setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             textView.setLetterSpacing(0.05f);
         }
-        textView.setTextColor(Color.parseColor("#6f717d"));
-        textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "ProximaSansMedium.ttf"));
+        if(fontId!=0) {
+            textView.setTypeface(ResourcesCompat.getFont(getContext(), fontId));
+        }
         addView(textView);
     }
 

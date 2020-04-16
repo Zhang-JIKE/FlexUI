@@ -2,7 +2,8 @@
 <resources>
     <declare-styleable name="TitleLayout">
         <attr name="titlelayout_text" format="string"/>
-        <attr name="titlelayout_text_color" format="string"/>
+        <attr name="titlelayout_text_color" format="color"/>
+        <attr name="titlelayout_font" format="reference"/>
         <attr name="titlelayout_text_minscale" format="dimension"/>
         <attr name="titlelayout_text_maxscale" format="dimension"/>
         <attr name="titlelayout_text_size" format="dimension"/>
