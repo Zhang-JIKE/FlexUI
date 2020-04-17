@@ -26,7 +26,7 @@ public class BaseActivity extends AppCompatActivity {
         return this;
     }
 
-    public static void startActivity(Context context){
+    public void startActivity(Context context){
         Intent intent = new Intent(context, BaseActivity.class);
         context.startActivity(intent);
     }
