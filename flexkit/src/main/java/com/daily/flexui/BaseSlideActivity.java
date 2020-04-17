@@ -15,7 +15,7 @@ import com.daily.flexui.util.StatusBarUtils;
 
 public class BaseSlideActivity extends SlideActivity {
 
-    private static Activity mActivity;
+    private static BaseSlideActivity mActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,8 +31,8 @@ public class BaseSlideActivity extends SlideActivity {
         return mActivity;
     }
 
-    public void startActivity(Context context){
-        Intent intent = new Intent(context, BaseActivity.class);
-        context.startActivity(intent);
+    public void start(){
+        Intent intent = new Intent(AppContextUtils.getAppContext(), BaseSlideActivity.class);
+        AppContextUtils.getAppContext().startActivity(intent);
     }
 }
