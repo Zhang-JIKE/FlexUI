@@ -22,7 +22,7 @@ public class BaseActivity extends AppCompatActivity {
         StatusBarUtils.setLightModeBar(this);
     }
 
-    public Activity getInstance(){
+    public static Activity getInstance(){
         return this;
     }
 

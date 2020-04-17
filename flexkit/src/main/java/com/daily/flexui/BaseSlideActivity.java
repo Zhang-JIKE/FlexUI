@@ -23,7 +23,7 @@ public class BaseSlideActivity extends SlideActivity {
         StatusBarUtils.setLightModeBar(this);
     }
 
-    public Activity getInstance(){
+    public static Activity getInstance(){
         return this;
     }
 
