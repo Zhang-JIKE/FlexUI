@@ -1,6 +1,8 @@
 package com.daily.flexui;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -18,5 +20,10 @@ public class BaseActivity extends AppCompatActivity {
         AppContextUtils.setAppActivity(this);
         AppContextUtils.setAppContext(this);
         StatusBarUtils.setLightModeBar(this);
+    }
+
+    public static void startActivity(Context context){
+        Intent intent = new Intent(context, BaseActivity.class);
+        AppContextUtils.getAppContext().startActivity(intent);
     }
 }
