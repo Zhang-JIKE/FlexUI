@@ -15,16 +15,20 @@ import com.daily.flexui.util.StatusBarUtils;
 
 public class BaseSlideActivity extends SlideActivity {
 
+    private static Activity mActivity;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppContextUtils.setAppActivity(this);
         AppContextUtils.setAppContext(this);
         StatusBarUtils.setLightModeBar(this);
+
+        mActivity = this;
     }
 
     public static Activity getInstance(){
-        return this;
+        return mActivity;
     }
 
     public void startActivity(Context context){
