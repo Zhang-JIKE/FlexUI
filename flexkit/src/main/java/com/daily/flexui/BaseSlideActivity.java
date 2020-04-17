@@ -1,5 +1,6 @@
 package com.daily.flexui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,8 +23,12 @@ public class BaseSlideActivity extends SlideActivity {
         StatusBarUtils.setLightModeBar(this);
     }
 
+    public Activity getInstance(){
+        return this;
+    }
+
     public static void startActivity(Context context){
         Intent intent = new Intent(context, BaseActivity.class);
-        AppContextUtils.getAppContext().startActivity(intent);
+        context.startActivity(intent);
     }
 }

@@ -22,8 +22,12 @@ public class BaseActivity extends AppCompatActivity {
         StatusBarUtils.setLightModeBar(this);
     }
 
+    public Activity getInstance(){
+        return this;
+    }
+
     public static void startActivity(Context context){
         Intent intent = new Intent(context, BaseActivity.class);
-        AppContextUtils.getAppContext().startActivity(intent);
+        context.startActivity(intent);
     }
 }
