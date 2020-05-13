@@ -17,9 +17,7 @@ import com.daily.flexui.util.AppContextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EndlessAdapter<T extends List> extends PagerAdapter {
-
-    private T data;
+public class EndlessAdapter extends PagerAdapter {
 
     private List<Integer> layoutIds;
 
@@ -33,9 +31,8 @@ public class EndlessAdapter<T extends List> extends PagerAdapter {
         this.onCreateItemListener = onCreateItemListener;
     }
 
-    public EndlessAdapter(List<Integer> layoutIds, T data, OnCreateItemListener onCreateItemListener){
+    public EndlessAdapter(List<Integer> layoutIds, OnCreateItemListener onCreateItemListener){
         this.layoutIds = layoutIds;
-        this.data = data;
         this.onCreateItemListener = onCreateItemListener;
     }
 
@@ -45,7 +42,7 @@ public class EndlessAdapter<T extends List> extends PagerAdapter {
     }
 
     public int getRealCount(){
-        return data.size();
+        return layoutIds.size();
     }
 
     @Override

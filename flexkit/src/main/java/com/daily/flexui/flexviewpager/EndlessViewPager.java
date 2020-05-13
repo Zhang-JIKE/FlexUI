@@ -33,7 +33,7 @@ public class EndlessViewPager extends FrameLayout {
 
     }
 
-    public void initViewPager(final ArrayList<Integer> layoutIds ,EndlessAdapter adapter){
+    public void setEndlessAdapter(final ArrayList<Integer> layoutIds ,EndlessAdapter adapter){
         indicator.setPageCount(layoutIds.size());
         viewPager.setAdapter(adapter);
         viewPager.setOnScrollListener(new FViewPager.OnScrollListener() {
@@ -50,6 +50,6 @@ public class EndlessViewPager extends FrameLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        measureChildren(widthMeasureSpec,heightMeasureSpec);
+        //measureChildren(widthMeasureSpec,heightMeasureSpec);
     }
 }
