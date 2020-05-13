@@ -60,11 +60,10 @@ public class HollowButton extends BaseGradientView {
         textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         textPaint.setTextSize(textSize);
         textPaint.setColor(baseColor);
-        textPaint.setStrokeWidth(3);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             textPaint.setLetterSpacing(0.1f);
         }
-        textPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        textPaint.setStyle(Paint.Style.FILL);
         textPaint.setFakeBoldText(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));

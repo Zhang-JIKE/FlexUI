@@ -77,7 +77,7 @@ public class FViewPager extends ViewPager {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-       int height = 0;
+        int height = 0;
 	    for(int i = 0; i < getChildCount(); i++) {
 	      View child = getChildAt(i);
 	      child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
